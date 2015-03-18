@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="IOS开发中访问成员变量 : IOS开发中访问成员变量">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>IOS开发中访问成员变量</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dulingkang/IOS-">View on GitHub</a>
+
+          <h1 id="project_title">IOS开发中访问成员变量</h1>
+          <h2 id="project_tagline">IOS开发中访问成员变量</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dulingkang/IOS-/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dulingkang/IOS-/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>在类中使用_property访问私有成员变量是没有问题的，使用self.property也可以，但是后者不能用在init 和 dealloc中，程序中全部使用_property这种形式会带来微小的优化，虽然在我们的小程序中体现不出来。
+早期的 Objective-C 语言，类的私有成员变量是只能定义在 .h 的头文件里面的，后来可以加到.m文件中，用如下形式：
+    <a href="https://github.com/interface" class="user-mention">@interface</a> EverydayTVC() 
+    <a href="https://github.com/property" class="user-mention">@property</a> (nonatomic, assign) int page;
+    <a href="https://github.com/end" class="user-mention">@end</a></p>
+
+<p>后来又允许在.m中直接添加成员变量：
+    <a href="https://github.com/implementation" class="user-mention">@implementation</a> EverydayTVC
+    {
+     NSInteger _num;
+    }
+推荐用这种方法和_property访问私有成员变量的方法。
+文章参考自唐巧大神的博客<a href="http://www.devtang.com%EF%BC%8C%E8%87%AA%E5%B7%B1%E5%81%9A%E4%B8%AA%E8%AE%B0%E5%BD%95%E3%80%82">http://www.devtang.com，自己做个记录。</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">IOS开发中访问成员变量 maintained by <a href="https://github.com/dulingkang">dulingkang</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
